@@ -9,7 +9,10 @@ const expressValidator = require('express-validator');
 
 // routes
 const index = require('./routes/index');
-const users = require('./routes/users');
+// const users = require('./routes/users');
+const articles = require('./routes/articles');
+const categories = require('./routes/categories');
+const manage = require('./routes/manage');
 
 // init app
 const app = express();
@@ -37,7 +40,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', index);
-app.use('/users', users);
+// app.use('/users', users);
+app.use('/articles', articles);
+app.use('/categories', categories);
+app.use('/manage', manage);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
