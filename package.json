@@ -1,0 +1,26 @@
+{
+  "name": "sportsblog",
+  "version": "0.1.0",
+  "description": "Simple sports blog app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "jstransformer": "^1.0.0",
+    "connect-flash": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "moment": "*",
+    "mongoose": "^4.11.1",
+    "morgan": "~1.8.1",
+    "nodemon": "^1.11.0",
+    "pug": "^2.0.0-rc.2",
+    "serve-favicon": "~2.4.2"
+  }
+}
