@@ -7,6 +7,12 @@ const bodyParser = require('body-parser');
 // const session = require('express-session');
 const expressValidator = require('express-validator');
 
+// Mongoose Connect
+const mongoose = require('mongoose');
+mongoose.createConnection('mongodb://sportsblog_admin:K@8J$BJKxsC4Wq@ds149412.mlab.com:49412/sportsblog');
+const db = mongoose.connection;
+
+
 // routes
 const index = require('./routes/index');
 // const users = require('./routes/users');
