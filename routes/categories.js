@@ -7,4 +7,6 @@ router.get('/categories', function(req, res, next) {
   res.render('categories', { title: 'Categories' });
 });
 
+
+
 module.exports = router;
