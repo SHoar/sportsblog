@@ -13,7 +13,6 @@ const categorySchema = mongoose.Schema({
 const Category = module.exports = mongoose.model('Category', categorySchema);
 
 // Get Categories
-
-module.exports.getCategories = function (callback, limit){
+module.exports.getCategories = function(callback, limit){
     Category.find(callback).limit(limit).sort([['title', 'ascending']]);
-}
+};

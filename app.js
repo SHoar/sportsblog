@@ -8,14 +8,20 @@ const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 
 // Mongoose Connect
+
+const dbuser = 'sportsblog_user';
+const dbpasswd = 'Sp0rtsBl0g';
 const mongoose = require('mongoose');
-mongoose.createConnection('mongodb://sportsblog_admin:K@8J$BJKxsC4Wq@ds149412.mlab.com:49412/sportsblog');
+const connection = mongoose.connect('mongodb://'+dbuser+':'+dbpasswd+'@ds149412.mlab.com:49412/sportsblog', {
+  useMongoClient: true
+});
 const db = mongoose.connection;
+
+
 
 
 // routes
 const index = require('./routes/index');
-// const users = require('./routes/users');
 const articles = require('./routes/articles');
 const categories = require('./routes/categories');
 const manage = require('./routes/manage');
